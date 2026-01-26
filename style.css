@@ -1,0 +1,136 @@
+/* Modern Dark/Light Hybrid Theme */
+
+/* Define colors */
+@define-color bg_color #f8f9fa;
+@define-color text_color #2c3e50;
+@define-color subtitle_color #7f8c8d;
+@define-color accent_color #6200ea;
+@define-color accent_hover #3700b3;
+@define-color card_bg #ffffff;
+@define-color border_color #e0e0e0;
+
+/* Button Colors */
+@define-color blue_btn #2196F3;
+@define-color blue_btn_hover #1976D2;
+@define-color green_btn #4CAF50;
+@define-color green_btn_hover #388E3C;
+@define-color orange_btn #FF9800;
+@define-color orange_btn_hover #F57C00;
+@define-color purple_btn #9C27B0;
+@define-color purple_btn_hover #7B1FA2;
+
+window.main-window {
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    color: @text_color;
+    font-family: "Segoe UI", "Roboto", "Helvetica", sans-serif;
+}
+
+/* Typography */
+label {
+    color: @text_color;
+}
+
+.title-label {
+    font-size: 32px;
+    font-weight: 800;
+    color: @text_color;
+    margin-bottom: 5px;
+    letter-spacing: 0.5px;
+    text-shadow: 0 1px 2px rgba(0,0,0,0.1);
+}
+
+.subtitle-label {
+    font-size: 16px;
+    font-weight: 400;
+    color: @subtitle_color;
+    margin-bottom: 30px;
+}
+
+/* Base Button Style */
+button {
+    background-color: @card_bg;
+    color: @text_color;
+    border: none;
+    border-radius: 12px;
+    padding: 10px 20px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    transition: all 0.2s cubic-bezier(0.25, 0.8, 0.25, 1);
+    font-weight: 600;
+    font-size: 15px;
+}
+
+button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 7px 14px rgba(0,0,0,0.1);
+}
+
+button:active {
+    transform: translateY(1px);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+/* Menu Buttons (Main Dashboard) */
+.menu-button {
+    font-size: 18px;
+    color: white;
+    border-radius: 16px;
+    padding: 20px;
+}
+
+.menu-button label {
+    color: white;
+    font-weight: 700;
+}
+
+.btn-tableaux {
+    background: linear-gradient(135deg, @blue_btn 0%, @blue_btn_hover 100%);
+}
+
+.btn-tableaux:hover {
+    box-shadow: 0 8px 16px rgba(33, 150, 243, 0.3);
+}
+
+.btn-listes {
+    background: linear-gradient(135deg, @green_btn 0%, @green_btn_hover 100%);
+}
+
+.btn-listes:hover {
+    box-shadow: 0 8px 16px rgba(76, 175, 80, 0.3);
+}
+
+.btn-arbres {
+    background: linear-gradient(135deg, @orange_btn 0%, @orange_btn_hover 100%);
+}
+
+.btn-arbres:hover {
+    box-shadow: 0 8px 16px rgba(255, 152, 0, 0.3);
+}
+
+.btn-graphes {
+    background: linear-gradient(135deg, @purple_btn 0%, @purple_btn_hover 100%);
+}
+
+.btn-graphes:hover {
+    box-shadow: 0 8px 16px rgba(156, 39, 176, 0.3);
+}
+
+/* Other inputs (entries, etc from previous style) */
+entry, textview {
+    background-color: @card_bg;
+    border: 1px solid @border_color;
+    border-radius: 8px;
+    padding: 10px;
+    color: @text_color;
+    transition: border-color 0.2s;
+}
+
+entry:focus, textview:focus {
+    border-color: @accent_color;
+    box-shadow: 0 0 0 3px rgba(98, 0, 234, 0.2);
+}
+
+scrolledwindow {
+    border: 1px solid @border_color;
+    border-radius: 8px;
+    background-color: @card_bg;
+}

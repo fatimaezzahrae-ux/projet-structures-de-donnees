@@ -1,0 +1,58 @@
+# Prerequisites
+*.d
+
+# Compiled Object files
+*.slo
+*.lo
+*.o
+*.obj
+
+# Precompiled Headers
+*.gch
+*.pch
+
+# Compiled Dynamic libraries
+*.so
+*.dylib
+*.dll
+
+# Fortran module files
+*.mod
+*.smod
+
+# Compiled Static libraries
+*.lai
+*.la
+*.a
+*.lib
+
+# Executables
+*.exe
+*.out
+*.app
+main.exe
+datastructures_app.exe
+
+# Build Directories
+build/
+dist/
+bin/
+obj/
+
+# Editor/IDE specific
+.vscode/
+.idea/
+*.user
+*.suo
+*.opensdf
+*.sdf
+*.ipch
+*.pdb
+*.idb
+*.layout
+*.depend
+
+# OS specific
+Thumbs.db
+Desktop.ini
+.DS_Store
