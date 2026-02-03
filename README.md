@@ -43,13 +43,7 @@ projet-structures-de-donnees/
 └── .gitignore
 ```
 
-## 🤝 Contribuer
 
-Les contributions sont les bienvenues ! Si vous souhaitez ajouter un nouvel algorithme ou une nouvelle structure, n'hésitez pas à ouvrir une Pull Request dans le dossier correspondant.
-
-## 📝 Licence
-
-Ce projet est sous licence MIT.
 
 ---
 **Auteur** : Moustaoui Fatimaezzahrae ([@fatimaezzahrae-ux](https://github.com/fatimaezzahrae-ux))
