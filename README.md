@@ -1,72 +1,125 @@
-# Projet de Structures de Données (GTK4)
+# Projet Structures de Données
 
-Ce projet est une application graphique développée en **langage C** avec la bibliothèque **GTK4**. Elle permet de visualiser et d'interagir avec différentes structures de données et algorithmes.
+Application de gestion et visualisation de structures de données avec deux implémentations : **C/GTK4** et **Python/CustomTkinter**.
 
-## 📂 Contenu du Dossier
+## 📁 Structure du Projet
 
-Le projet est structuré comme suit :
-
-### Fichiers Principaux
-- **`main.c`** : Point d'entrée de l'application. Initialise la fenêtre principale et le menu.
-- **`CMakeLists.txt`** : Fichier de configuration pour la compilation automatique avec CMake.
-- **`style.css`** : Feuille de style CSS pour l'interface graphique GTK.
-
-### Modules (Fenêtres et Algorithmes)
-Chaque structure de données possède sa propre fenêtre et ses algorithmes associés :
-
-1.  **Tableaux & Tris** (`arrays_window.c/h`, `sort_algorithms.c/h`)
-    -   Visualisation des algorithmes de tri (Bulle, Insertion, Shell, Rapide).
-    -   Analyse de complexité via **`curve_window.c/h`**.
-
-2.  **Listes Chaînées** (`lists_window.c/h`, `list_algorithms.c/h`)
-    -   Manipulation de listes (ajout, suppression, parcours).
-
-3.  **Arbres Binaires** (`trees_window.c/h`, `tree_algorithms.c/h`)
-    -   Visualisation d'arbres binaires de recherche (BST).
-
-4.  **Graphes** (`graphs_window.c/h`, `graph_algorithms.c/h`)
-    -   Algorithmes de graphes (Dijkstra, parcours, etc.).
-
----
-
-## 🛠️ Prérequis
-
-Pour compiler et exécuter ce projet, vous avez besoin de :
--   Un compilateur C (GCC via MinGW ou MSYS2 sur Windows).
--   La bibliothèque **GTK4** (incluant ses dépendances).
--   **CMake** (recommandé pour la compilation).
--   **Pkg-config**.
-
----
-
-## 🚀 Installation et Compilation
-
-Vous pouvez compiler le projet de deux manières : avec **CMake** (recommandé) ou manuellement avec **GCC**.
-
-### Option 1 : Via CMake (Recommandé)
-Cette méthode est plus simple et gère automatiquement les dépendances.
-
-1.  Créez un dossier de build :
-    ```bash
-    mkdir build
-    cd build
-    ```
-2.  Générez les fichiers de compilation et compilez :
-    ```bash
-    cmake ..
-    cmake --build .
-    ```
-3.  L'exécutable `datastructures_app.exe` sera généré.
-
-### Option 2 : Compilation Manuelle (GCC)
-Si vous préférez compiler directement en ligne de commande :
-
-```bash
-gcc -g main.c arrays_window.c sort_algorithms.c curve_window.c lists_window.c list_algorithms.c graph_algorithms.c graphs_window.c tree_algorithms.c trees_window.c -o main.exe $(pkg-config --cflags --libs gtk4)
+```
+projet-structures-de-donnees/
+│
+├── c-gtk4/              # Version C avec GTK4
+│   └── ...
+│
+└── python/              # Version Python avec CustomTkinter
+    ├── miniSysteme.py
+    ├── requirements.txt
+    └── README.md
 ```
 
+## 🌟 Fonctionnalités
+
+Les deux versions implémentent les mêmes fonctionnalités :
+
+### 📋 Gestion de Listes
+- Listes chaînées (simple et double)
+- Opérations : insertion, suppression, modification
+- Algorithmes de tri (Bubble, Insertion, Shell, Quick Sort)
+- Comparaison de performance
+- Visualisation graphique
+
+### 🌳 Gestion d'Arbres
+- Arbres Binaires de Recherche (BST)
+- Arbres N-aires
+- Parcours (Profondeur, Largeur)
+- Conversion N-aire → Binaire
+- Visualisation interactive
+
+### 🕸️ Gestion de Graphes
+- Graphes orientés/non-orientés
+- Graphes pondérés/non-pondérés
+- Algorithmes : DFS, BFS, Dijkstra, Prim, Kruskal
+- Détection de cycles
+- Visualisation des chemins
+
+## 🚀 Versions
+
+### Version C/GTK4
+
+Interface native utilisant GTK4 pour une performance optimale.
+
+**Technologies** :
+- Langage C
+- GTK4 (interface graphique)
+- Cairo (rendu graphique)
+
+**Voir** : [Documentation C](./c-gtk4/README.md)
+
+### Version Python/CustomTkinter
+
+Interface moderne et cross-platform avec Python.
+
+**Technologies** :
+- Python 3.8+
+- CustomTkinter (interface graphique moderne)
+- NetworkX (manipulation de graphes)
+- Matplotlib (visualisation)
+
+**Voir** : [Documentation Python](./python/README.md)
+
+## 💻 Installation
+
+### Version C
+Consultez le [README C](./c-gtk4/README.md) pour les instructions d'installation.
+
+### Version Python
+
+```bash
+cd python
+pip install -r requirements.txt
+python miniSysteme.py
+```
+
+## 📊 Comparaison des Versions
+
+| Critère | C/GTK4 | Python/CustomTkinter |
+|---------|--------|----------------------|
+| **Performance** | ⭐⭐⭐⭐⭐ Très rapide | ⭐⭐⭐⭐ Rapide |
+| **Portabilité** | ⭐⭐⭐ Nécessite GTK4 | ⭐⭐⭐⭐⭐ Cross-platform |
+| **Facilité d'installation** | ⭐⭐⭐ Dépendances système | ⭐⭐⭐⭐⭐ pip install |
+| **Développement** | ⭐⭐⭐ Plus verbeux | ⭐⭐⭐⭐⭐ Rapide et concis |
+| **Taille exécutable** | ⭐⭐⭐⭐ ~19 MB | ⭐⭐⭐ ~150 KB (+ Python) |
+
+## 🎯 Cas d'Usage
+
+- **Version C** : Idéale pour les environnements où la performance est critique
+- **Version Python** : Parfaite pour l'apprentissage, le prototypage rapide et la portabilité
+
+## 🤝 Contribution
+
+Les contributions sont les bienvenues sur les deux versions! 
+
+1. Fork le projet
+2. Créez une branche (`git checkout -b feature/amelioration`)
+3. Commit vos changements (`git commit -m 'Ajout fonctionnalité'`)
+4. Push vers la branche (`git push origin feature/amelioration`)
+5. Ouvrez une Pull Request
+
+## 📝 Licence
+
+Ce projet est sous licence MIT.
+
+## 👨‍💻 Auteur
+
+**Moustaoui Fatimaezzahrae**
+- GitHub: [@fatimaezzahrae-ux](https://github.com/fatimaezzahrae-ux)
+
+## 📚 Ressources
+
+- [Documentation GTK4](https://docs.gtk.org/gtk4/)
+- [Documentation Python](https://docs.python.org/3/)
+- [CustomTkinter](https://github.com/TomSchimansky/CustomTkinter)
+- [NetworkX](https://networkx.org/)
+
 ---
 
-## ⚠️ Notes Importantes
-
--   **`style.css`** : Ce fichier doit impérativement se trouver dans le **même dossier** que l'exécutable (`main.exe`) pour que le style de l'application s'affiche correctement. Si vous compilez dans un dossier `build`, pensez à copier le fichier `style.css` à côté de l'exécutable.
+⭐ Si ce projet vous a été utile, n'hésitez pas à lui donner une étoile!
