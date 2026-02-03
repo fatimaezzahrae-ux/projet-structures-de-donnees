@@ -1,148 +1,80 @@
-# Mini Système - Gestion de Structures de Données
+# Projet Structures de Données - Version Python
 
-Une application graphique interactive pour la visualisation et la manipulation de structures de données (Listes, Arbres, Graphes).
+Application graphique interactive et moderne pour visualiser et manipuler les structures de données. Cette version mise sur la flexibilité de Python et la richesse des bibliothèques de visualisation.
 
-## 🌟 Fonctionnalités
+## 🚀 Fonctionnalités Détaillées
 
-### 📋 Gestion de Listes
-- **Types de données supportés** : Entier, Réel, Caractère, Chaîne de caractères
-- **Structures** : Liste simple et liste doublement chaînée
-- **Modes de remplissage** : Manuel ou Aléatoire
-- **Opérations** :
-  - Insertion (début, fin, indice)
-  - Suppression par indice
-  - Modification d'éléments
-  - Tri avec plusieurs algorithmes
-- **Algorithmes de tri** :
-  - Tri à bulle (Bubble Sort)
-  - Tri par insertion (Insertion Sort)
-  - Tri Shell (Shell Sort)
-  - Tri rapide (Quick Sort)
-- **Comparaison de performance** entre les différents algorithmes de tri
-- **Visualisation graphique** avec défilement horizontal/vertical
+### 1. 📋 Gestion de Listes
+Manipulation de listes chaînées avec une interface intuitive.
+- **Types de données** : Entier, Réel, Caractère, Chaîne.
+- **Structures** : Liste Simple, Liste Doublement Chaînée.
+- **Fonctionnalités** :
+  - Insertion (Début, Fin, Indice).
+  - Suppression et Modification dynamiques.
+  - **Comparaison de Tris** : Visualisation des temps d'exécution pour :
+    - Bubble Sort
+    - Insertion Sort
+    - Quick Sort
+    - Shell Sort
 
-### 🌳 Gestion d'Arbres
-- **Types d'arbres** :
-  - BST (Arbre Binaire de Recherche)
-  - Arbre N-aire
-- **Opérations** :
-  - Insertion de nœuds
-  - Suppression de nœuds
-  - Modification de valeurs
-  - Conversion Arbre N-aire → Arbre Binaire
-- **Parcours** :
-  - Profondeur : Préfixe, Infixe, Postfixe
-  - Largeur (BFS)
-- **Génération aléatoire** d'arbres
-- **Visualisation graphique** interactive avec NetworkX et Matplotlib
-- **Export** au format JSON
+### 2. 🌳 Gestion d'Arbres
+Visualisation puissante grâce à `NetworkX` et `Matplotlib`.
+- **Types** :
+  - **BST (Arbre Binaire de Recherche)** : Insertion et équilibrage visuel.
+  - **Arbre N-aire** : Arbres généraux avec N enfants par nœud.
+- **Parcours Visuels** :
+  - Profondeur : Pré-ordre, In-ordre, Post-ordre.
+  - Largeur (BFS).
+- **Fonctionnalités avancées** :
+  - Génération aléatoire d'arbres.
+  - **Conversion** automatique N-aire vers Binaire.
+  - **Export JSON** : Sauvegardez vos arbres pour les réutiliser.
 
-### 🕸️ Gestion de Graphes
-- **Types de graphes** :
-  - Orienté / Non-orienté
-  - Pondéré / Non-pondéré
-- **Opérations** :
-  - Ajout/Suppression de sommets
-  - Ajout/Suppression d'arêtes
-  - Modification de poids
-- **Algorithmes** :
-  - Parcours en profondeur (DFS)
-  - Parcours en largeur (BFS)
-  - Plus court chemin (Dijkstra)
-  - Arbre couvrant minimal (Prim, Kruskal)
-  - Détection de cycles
-- **Visualisation interactive** avec mise en évidence des chemins
+### 3. 🕸️ Gestion de Graphes
+Outil complet pour l'analyse de graphes.
+- **Modélisation** : Graphes Orientés/Non-orientés, Pondérés.
+- **Algorithmes visuels** :
+  - **Parcours** : DFS (Profondeur) et BFS (Largeur).
+  - **Chemins** : Dijkstra (Plus court chemin).
+  - **Arbres Couvrants** : Prim et Kruskal (MST).
+  - **Analyse** : Détection de cycles.
 
-## 🚀 Installation
+## 🛠️ Stack Technique
 
-### Prérequis
-- Python 3.8 ou supérieur
-- pip (gestionnaire de paquets Python)
+- **Langage** : Python 3.8+
+- **Interface Graphique** : `CustomTkinter` (Wrapper moderne pour Tkinter avec mode sombre/clair).
+- **Structures de Graphe** : `NetworkX` (Standard industriel pour les graphes).
+- **Rendu** : `Matplotlib` (Intégré dans Tkinter via `FigureCanvasTkAgg`).
 
-### Installation des dépendances
+## 💻 Installation
 
+### 1. Créer un environnement virtuel (Recommandé)
+```bash
+python -m venv venv
+# Windows
+.\venv\Scripts\activate
+# Linux/Mac
+source venv/bin/activate
+```
+
+### 2. Installer les dépendances
 ```bash
 pip install -r requirements.txt
 ```
+*Le fichier `requirements.txt` contient : `customtkinter`, `matplotlib`, `networkx`.*
 
-## 💻 Utilisation
+## 🚀 Utilisation
 
-### Lancer l'application
+Lancez simplement le script principal :
 
 ```bash
 python miniSysteme.py
 ```
 
-### Interface principale
-L'application s'ouvre avec un menu principal permettant de choisir la structure de données à manipuler :
-- **Listes** : Gestion de listes chaînées
-- **Arbres** : Gestion d'arbres binaires et N-aires
-- **Graphes** : Gestion de graphes
+L'application ouvrira un menu principal vous permettant de naviguer entre les modules (Listes, Arbres, Graphes).
 
-## 📦 Structure du projet
-
-```
-projet-en-python/
-│
-├── miniSysteme.py          # Application principale
-├── miniSysteme.ipynb.ipynb # Version Jupyter Notebook
-├── requirements.txt        # Dépendances Python
-├── README.md              # Documentation
-└── .gitignore             # Fichiers à ignorer par Git
-```
-
-## 🛠️ Technologies utilisées
-
-- **CustomTkinter** : Interface graphique moderne
-- **Tkinter** : Widgets GUI natifs
-- **NetworkX** : Manipulation et visualisation de graphes
-- **Matplotlib** : Visualisation graphique
-- **Python Standard Library** : collections, uuid, json, etc.
-
-## 📸 Captures d'écran
-
-*(Ajoutez vos captures d'écran ici)*
-
-## 🎯 Cas d'usage
-
-- **Apprentissage** : Idéal pour comprendre visuellement les structures de données
-- **Enseignement** : Outil pédagogique pour les cours d'algorithmique
-- **Prototypage** : Test rapide d'algorithmes sur différentes structures
-
-## 🤝 Contribution
-
-Les contributions sont les bienvenues! N'hésitez pas à :
-1. Fork le projet
-2. Créer une branche (`git checkout -b feature/amelioration`)
-3. Commit vos changements (`git commit -m 'Ajout d'une fonctionnalité'`)
-4. Push vers la branche (`git push origin feature/amelioration`)
-5. Ouvrir une Pull Request
-
-## 📝 Licence
-
-Ce projet est sous licence MIT - voir le fichier LICENSE pour plus de détails.
-
-## 👨‍💻 Auteur
-
-**Moustaoui Fatimaezzahrae**
-
-## 🔗 Liens
-
-- [Version C/GTK4](https://github.com/votre-username/votre-repo-c) *(Ajoutez le lien vers votre repo C)*
-- [Documentation Python](https://docs.python.org/3/)
-- [CustomTkinter Documentation](https://github.com/TomSchimansky/CustomTkinter)
-
-## 📋 Notes de version
-
-### Version 1.0.0
-- Interface graphique complète avec CustomTkinter
-- Gestion de listes chaînées (simple/double)
-- Gestion d'arbres (BST, N-aire)
-- Gestion de graphes (orienté/non-orienté, pondéré/non-pondéré)
-- Algorithmes de tri et de parcours
-- Visualisation interactive
-- Export de données
+## 📂 Organisation du Code
+- `miniSysteme.py` : Le fichier unique contenant toute la logique (Classes GUI, Algorithmes, Visualisation) pour une portabilité maximale.
 
 ---
-
-⭐ Si ce projet vous a été utile, n'hésitez pas à lui donner une étoile sur GitHub!
+**Auteur** : Moustaoui Fatimaezzahrae
