@@ -1,125 +1,55 @@
-# Projet Structures de Données
+# Projet Structures de Données 📚
 
-Application de gestion et visualisation de structures de données avec deux implémentations : **C/GTK4** et **Python/CustomTkinter**.
+Bienvenue dans ce dépôt dédié à la **visualisation et manipulation de structures de données**. 
 
-## 📁 Structure du Projet
+Ce projet propose deux implémentations complètes d'une même application, permettant de comparer deux approches techniques différentes pour résoudre les mêmes problèmes algorithmiques.
+
+## 🗂️ Choisissez votre version
+
+Cliquez sur l'un des dossiers ci-dessous pour accéder à la documentation spécifique et au code source :
+
+| 🚀 **[Version Native (C / GTK4)](./c-gtk4/README.md)** | 🐍 **[Version Moderne (Python)](./python/README.md)** |
+| :--- | :--- |
+| **Performance maximale** et gestion mémoire manuelle. Interface native fluide. | **Développement rapide** et portabilité. Interface moderne avec CustomTkinter. |
+| [➡️ Voir la documentation C](./c-gtk4/README.md) | [➡️ Voir la documentation Python](./python/README.md) |
+
+## 🌟 Ce que vous pouvez faire avec ce projet
+
+Les deux versions permettent de visualiser et manipuler de manière interactive :
+
+*   **Listes Chaînées** (Simples et Doubles)
+*   **Algorithmes de Tri** (Visualisation pas à pas pour les tableaux)
+*   **Arbres** (BST et N-aires avec parcours graphiques)
+*   **Graphes** (Algorithmes de plus court chemin comme Dijkstra)
+
+## 📊 Comparatif Technique
+
+| Fonctionnalité | Version C / GTK4 | Version Python / CustomTkinter |
+| :--- | :--- | :--- |
+| **Langage** | C (Standard C11) | Python 3.8+ |
+| **Interface Graphique** | GTK4 + Cairo | CustomTkinter + Matplotlib |
+| **Gestion Graphes** | Implémentation manuelle (Matrices) | Librairie NetworkX |
+| **Performance** | ⚡ Très Haute (~10ms chargement) | 🐢 Moyenne (Interprété) |
+| **Installation** | Complexe (Nécessite compilation) | Simple (`pip install`) |
+| **Taille Exécutable** | Légère (~19 Mo) | Lourde (si compilé en .exe) |
+
+## 📁 Structure du Dépôt
 
 ```
 projet-structures-de-donnees/
-│
-├── c-gtk4/              # Version C avec GTK4
-│   └── ...
-│
-└── python/              # Version Python avec CustomTkinter
-    ├── miniSysteme.py
-    ├── requirements.txt
-    └── README.md
+├── c-gtk4/              # Code source C, Headers, Makefiles
+├── python/              # Script Python, Requirements
+├── README.md            # Ce fichier
+└── .gitignore
 ```
 
-## 🌟 Fonctionnalités
+## 🤝 Contribuer
 
-Les deux versions implémentent les mêmes fonctionnalités :
-
-### 📋 Gestion de Listes
-- Listes chaînées (simple et double)
-- Opérations : insertion, suppression, modification
-- Algorithmes de tri (Bubble, Insertion, Shell, Quick Sort)
-- Comparaison de performance
-- Visualisation graphique
-
-### 🌳 Gestion d'Arbres
-- Arbres Binaires de Recherche (BST)
-- Arbres N-aires
-- Parcours (Profondeur, Largeur)
-- Conversion N-aire → Binaire
-- Visualisation interactive
-
-### 🕸️ Gestion de Graphes
-- Graphes orientés/non-orientés
-- Graphes pondérés/non-pondérés
-- Algorithmes : DFS, BFS, Dijkstra, Prim, Kruskal
-- Détection de cycles
-- Visualisation des chemins
-
-## 🚀 Versions
-
-### Version C/GTK4
-
-Interface native utilisant GTK4 pour une performance optimale.
-
-**Technologies** :
-- Langage C
-- GTK4 (interface graphique)
-- Cairo (rendu graphique)
-
-**Voir** : [Documentation C](./c-gtk4/README.md)
-
-### Version Python/CustomTkinter
-
-Interface moderne et cross-platform avec Python.
-
-**Technologies** :
-- Python 3.8+
-- CustomTkinter (interface graphique moderne)
-- NetworkX (manipulation de graphes)
-- Matplotlib (visualisation)
-
-**Voir** : [Documentation Python](./python/README.md)
-
-## 💻 Installation
-
-### Version C
-Consultez le [README C](./c-gtk4/README.md) pour les instructions d'installation.
-
-### Version Python
-
-```bash
-cd python
-pip install -r requirements.txt
-python miniSysteme.py
-```
-
-## 📊 Comparaison des Versions
-
-| Critère | C/GTK4 | Python/CustomTkinter |
-|---------|--------|----------------------|
-| **Performance** | ⭐⭐⭐⭐⭐ Très rapide | ⭐⭐⭐⭐ Rapide |
-| **Portabilité** | ⭐⭐⭐ Nécessite GTK4 | ⭐⭐⭐⭐⭐ Cross-platform |
-| **Facilité d'installation** | ⭐⭐⭐ Dépendances système | ⭐⭐⭐⭐⭐ pip install |
-| **Développement** | ⭐⭐⭐ Plus verbeux | ⭐⭐⭐⭐⭐ Rapide et concis |
-| **Taille exécutable** | ⭐⭐⭐⭐ ~19 MB | ⭐⭐⭐ ~150 KB (+ Python) |
-
-## 🎯 Cas d'Usage
-
-- **Version C** : Idéale pour les environnements où la performance est critique
-- **Version Python** : Parfaite pour l'apprentissage, le prototypage rapide et la portabilité
-
-## 🤝 Contribution
-
-Les contributions sont les bienvenues sur les deux versions! 
-
-1. Fork le projet
-2. Créez une branche (`git checkout -b feature/amelioration`)
-3. Commit vos changements (`git commit -m 'Ajout fonctionnalité'`)
-4. Push vers la branche (`git push origin feature/amelioration`)
-5. Ouvrez une Pull Request
+Les contributions sont les bienvenues ! Si vous souhaitez ajouter un nouvel algorithme ou une nouvelle structure, n'hésitez pas à ouvrir une Pull Request dans le dossier correspondant.
 
 ## 📝 Licence
 
 Ce projet est sous licence MIT.
 
-## 👨‍💻 Auteur
-
-**Moustaoui Fatimaezzahrae**
-- GitHub: [@fatimaezzahrae-ux](https://github.com/fatimaezzahrae-ux)
-
-## 📚 Ressources
-
-- [Documentation GTK4](https://docs.gtk.org/gtk4/)
-- [Documentation Python](https://docs.python.org/3/)
-- [CustomTkinter](https://github.com/TomSchimansky/CustomTkinter)
-- [NetworkX](https://networkx.org/)
-
 ---
-
-⭐ Si ce projet vous a été utile, n'hésitez pas à lui donner une étoile!
+**Auteur** : Moustaoui Fatimaezzahrae ([@fatimaezzahrae-ux](https://github.com/fatimaezzahrae-ux))
